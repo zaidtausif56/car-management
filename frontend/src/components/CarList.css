@@ -1,0 +1,111 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
+  color: #444;
+}
+
+/* Add Car Button */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Search Bar */
+input[type="text"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Car List Styling */
+.carlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Individual Car Card Styling */
+.carlist > div {
+  flex: 0 1 calc(30% - 20px); /* Adjust to fit 3 items in a row with some gap */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.carlist > div:hover {
+  transform: translateY(-5px);
+}
+
+.carlist h3 {
+  margin: 0 0 10px 0;
+  color: #007bff;
+  font-size: 20px;
+}
+
+.carlist p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Edit/View Car Link */
+.carlist a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.carlist a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carlist > div {
+    flex: 0 1 calc(45% - 20px); /* Adjust to fit 2 items in a row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .carlist > div {
+    flex: 0 1 calc(100% - 20px); /* Adjust to fit 1 item in a row on very small screens */
+  }
+}
